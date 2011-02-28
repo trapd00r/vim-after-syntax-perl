@@ -32,10 +32,10 @@ hi perlStatementInclude ctermfg=204 cterm=bold
 
 " \e \t \n \d
 hi perlSpecialString    ctermfg=143 cterm=bold
-" hash 
+" hash
 hi perlVarPlain2        ctermfg=161
 
 "hi PerlVarNotInMatches  cterm=bold
 "hi perlVarSimpleMember  cterm=bold
-"hi perlVarPlain         ctermfg=107  cterm=bold 
+"hi perlVarPlain         ctermfg=107  cterm=bold
 
