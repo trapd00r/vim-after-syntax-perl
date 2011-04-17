@@ -32,6 +32,8 @@ hi perlFiledescRead      ctermfg=245 cterm=bold
 hi perlStatementFiledesc ctermfg=202 cterm=bold
 hi perlQQ                ctermfg=137 cterm=bold
 hi perlStringStartEnd    ctermfg=166 cterm=bold
+hi perlMatch             ctermfg=202 cterm=bold
+hi perlSpecialMatch      ctermfg=172 cterm=NONE
 
 hi pAnd                  ctermfg=196 cterm=bold
 hi pOr                   ctermfg=196 cterm=bold
@@ -41,7 +43,7 @@ hi semi                  ctermfg=086 cterm=none
 hi pArrow                ctermfg=085 cterm=bold
 hi pDump                 ctermfg=196 cterm=bold
 hi pARGV                 ctermfg=148 cterm=bold
-hi Parens                ctermfg=208 cterm=bold
+hi Parens                ctermfg=248 cterm=bold
 hi Braces                            cterm=bold
 hi Brackets                          cterm=bold
 hi Dumper                ctermfg=196 cterm=bold
