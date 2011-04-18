@@ -1,5 +1,6 @@
-" vim-perl-after
-" Magnus Woldrich, 2011
+" vim-after-syntax-perl
+" Author: Magnus Woldrich <m@japh.se>
+" URL:    http://github.com/trapd00r/vim-after-syntax-perl
 
 syn match Parens            display '()'
 syn match Brackets          display '[][]'
@@ -24,16 +25,34 @@ syn match pAnd              display '&&'
 syn match pExclamation_mark display '!'
 syn match pQuestion_mark    display '?'
 syn match pColon            display ' : '
-"syn match pMod              display '\v(([A-Za-z]+)::([A-Za-z]+))+'
+syn match pMod              display '\v(([A-Za-z]+)::([A-Za-z]+))+'
 
 
 hi perlStatementIndirObj ctermfg=202 cterm=bold
 hi perlFiledescRead      ctermfg=245 cterm=bold
 hi perlStatementFiledesc ctermfg=202 cterm=bold
-hi perlQQ                ctermfg=137 cterm=bold
+hi perlQQ                ctermfg=137 cterm=NONE
+hi perlMatch             ctermfg=137 cterm=NONE
+hi perlSpecialMatch      ctermfg=214 cterm=NONE
+hi perlMatchStartEnd     ctermfg=131 cterm=bold
+hi perlTodo              ctermfg=196 cterm=bold ctermbg=235
+
+hi perlRepeat            ctermfg=197 cterm=bold
+hi perlOperator          ctermfg=124 cterm=bold
+hi perlStatementList     ctermfg=166 cterm=bold
+hi perlStatementScalar   ctermfg=250 cterm=bold
+
+hi perlSharpBang         ctermfg=244 cterm=italic
+hi perlFunctionName                  cterm=bold
+hi perlStatementPackage  ctermfg=208 cterm=bold
+hi perlMethod            ctermfg=148 cterm=bold
+hi perlStatementInclude  ctermfg=204 cterm=bold
+hi perlFiledescStatement ctermfg=160 cterm=bold
+hi perlString            ctermfg=137 cterm=none ctermbg=234
+hi perlStringUnexpanded  ctermfg=131 cterm=none ctermbg=234
+hi perlSpecialString     ctermfg=143 cterm=bold
 hi perlStringStartEnd    ctermfg=166 cterm=bold
-hi perlMatch             ctermfg=202 cterm=bold
-hi perlSpecialMatch      ctermfg=172 cterm=NONE
+hi perlVarPlain2         ctermfg=178 cterm=NONE
 
 hi pAnd                  ctermfg=196 cterm=bold
 hi pOr                   ctermfg=196 cterm=bold
@@ -52,12 +71,6 @@ hi comma                 ctermfg=246 cterm=none
 hi dt                    ctermfg=002 cterm=bold
 hi pkg                   ctermfg=245 cterm=none
 hi pRepeat               ctermfg=197 cterm=bold
-hi perlFunctionName                  cterm=bold
-hi perlStatementPackage  ctermfg=208 cterm=bold
-hi perlMethod            ctermfg=148 cterm=bold
-hi perlStatementInclude  ctermfg=204 cterm=bold
-hi perlSpecialString     ctermfg=143 cterm=bold
-hi perlVarPlain2         ctermfg=161 cterm=none
 hi pExclamation_mark     ctermfg=196 cterm=bold
 hi pQuestion_mark        ctermfg=082 cterm=bold
 hi pColon                ctermfg=160 cterm=bold
