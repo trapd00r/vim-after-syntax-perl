@@ -6,7 +6,7 @@
 
 This is a Vim syntax file for Perl. It goes into $VIMRUNTIME/after/syntax/ .
 
-For best results, I'd suggest using the ![Neverland][0] Vim colorscheme.
+For best results, I'd suggest using the [Neverland][0] Vim colorscheme.
 
 Before and after:
 
