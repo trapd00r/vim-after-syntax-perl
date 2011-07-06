@@ -4,9 +4,12 @@
 
 # DESCRIPTION
 
-This is a Vim syntax file for Perl. It goes into $VIMRUNTIME/after/syntax/ .
+Extended syntax highlighting rules for Perl. For best results, I'd suggest
+using the [Neverland][0] Vim colorscheme.
 
-For best results, I'd suggest using the [Neverland][0] Vim colorscheme.
+# INSTALLATION
+
+    Copy after/syntax/perl.vim into your $VIMRUNTIME/after/syntax/ directory.
 
 Before and after:
 
@@ -14,7 +17,5 @@ Before and after:
 
 
   [0]: https://github.com/trapd00r/neverland-vim-theme
-  [1]: http://devel.japh.se/vim-perl-after/vim-perl-before.png
-  [2]: http://devel.japh.se/vim-perl-after/vim-perl-after.png
-
-That was all.
+  [1]: http://devel.japh.se/vim-after-syntax-perl/before.png
+  [2]: http://devel.japh.se/vim-after-syntax-perl/after.png
