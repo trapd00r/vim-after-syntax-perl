@@ -2,7 +2,153 @@
 "   Where: $VIMRUNTIME/after/syntax/perl.vim
 "  Author: Magnus Woldrich <m@japh.se>
 "     URL: http://github.com/trapd00r/vim-after-syntax-perl
-" Updated: 2011-07-06 11:34:48
+" Updated: 2022-04-28 10:37:17
+
+
+highlight perlAutoload                  ctermbg=196
+highlight perlBraces                    ctermbg=220
+highlight perlFakeGroup                 ctermbg=220
+highlight perlFiledescRead              ctermfg=245 cterm=bold
+highlight perlFiledescStatement         ctermfg=160 cterm=bold
+highlight perlFiledescStatementComma    ctermbg=220
+highlight perlFiledescStatementNocomma  ctermbg=220
+highlight perlFormat                    ctermbg=032
+highlight perlFunctionName              ctermfg=fg  cterm=bolditalic
+highlight perlHereDocStart              ctermbg=196
+highlight perlMatch                     ctermfg=137 cterm=none
+highlight perlMatchStartEnd             ctermfg=131 cterm=bold
+highlight perlMethod                    ctermfg=148 cterm=bold
+highlight perlOperator                  ctermfg=124 cterm=bold
+highlight perlPOD                       ctermfg=137 ctermbg=bg cterm=italicbold
+highlight perlPackageConst              ctermbg=196
+highlight perlQQ                        ctermfg=137 cterm=none
+highlight perlRainbow_r0                ctermfg=225
+highlight perlRainbow_r1                ctermfg=220
+highlight perlRainbow_r2                ctermfg=208
+highlight perlRainbow_r3                ctermfg=196
+highlight perlRepeat                    ctermfg=197 cterm=bold
+highlight perlSharpBang                 ctermfg=244 cterm=italic
+highlight perlSpecialMatch              ctermfg=214 cterm=none
+highlight perlSpecialString             ctermfg=143 cterm=bold
+highlight perlStatementFiledesc         ctermfg=202 cterm=bold
+highlight perlStatementInclude          ctermfg=204 cterm=bold
+highlight perlStatementIndirObj         ctermfg=202 cterm=bold
+highlight perlStatementIndirObjWrap     ctermbg=220
+highlight perlStatementList             ctermfg=166 cterm=bold
+highlight perlStatementMisc             ctermfg=172 cterm=none
+highlight perlStatementPackage          ctermfg=208 cterm=bold
+highlight perlStatementScalar           ctermfg=250 cterm=bold
+highlight perlStatementStorage          ctermfg=172 cterm=none
+highlight perlString                    ctermfg=137 cterm=none ctermbg=234
+highlight perlStringStartEnd            ctermfg=166 cterm=bold
+highlight perlStringUnexpanded          ctermfg=131 cterm=none ctermbg=234
+highlight perlSyncPOD                   ctermbg=032
+highlight perlTodo                      ctermfg=196 cterm=bold ctermbg=235
+highlight perlVarBlock                  ctermbg=220
+highlight perlVarBlock2                 ctermbg=220
+highlight perlVarMember                 ctermbg=220
+highlight perlVarPlain                  ctermfg=010 cterm=none
+highlight perlVarPlain2                 ctermfg=178 cterm=none
+highlight perlVarSimpleMemberName       ctermfg=137
+
+highlight link perlConditional        Conditional
+highlight link perlElseIfError        Error
+highlight link perlControl            PreProc
+highlight link perlStatementControl   perlStatement
+highlight link perlStatementRegexp    perlStatement
+highlight link perlStatementNumeric   perlStatement
+highlight link perlStatementHash      perlStatement
+highlight link perlStatementIOfunc    perlStatement
+highlight link perlStatementVector    perlStatement
+highlight link perlStatementFiles     perlStatement
+highlight link perlStatementFlow      perlStatement
+highlight link perlStatementProc      perlStatement
+highlight link perlStatementSocket    perlStatement
+highlight link perlStatementIPC       perlStatement
+highlight link perlStatementNetwork   perlStatement
+highlight link perlStatementPword     perlStatement
+highlight link perlStatementTime      perlStatement
+highlight link perlLabel              Label
+highlight link perlVarNotInMatches    perlIdentifier
+highlight link perlVarSlash           perlIdentifier
+highlight link perlPackageRef         perlType
+highlight link perlVarSimpleMember    perlIdentifier
+highlight link perlPostDeref          perlIdentifier
+highlight link perlShellCommand       perlString
+highlight link perlFloat              Float
+highlight link perlNumber             Number
+highlight link perlArrow              perlIdentifier
+highlight link perlSpecialStringU2    perlString
+highlight link perlSpecialStringU     perlSpecial
+highlight link perlNotEmptyLine       Error
+highlight link perlVStringV           perlStringStartEnd
+highlight link perlParensSQ           perlString
+highlight link perlBracketsSQ         perlString
+highlight link perlBracesSQ           perlString
+highlight link perlAnglesSQ           perlString
+highlight link perlParensDQ           perlString
+highlight link perlBracketsDQ         perlString
+highlight link perlBracesDQ           perlString
+highlight link perlAnglesDQ           perlString
+highlight link perlSubstitutionGQQ    perlString
+highlight link perlSubstitutionSQ     perlString
+highlight link perlTranslationGQ      perlString
+highlight link perlComment            Comment
+highlight link perlHereDoc            perlString
+highlight link perlPackageDecl        perlType
+highlight link perlSubError           Error
+highlight link perlSubAttributesCont  perlSubAttributes
+highlight link perlSubAttributes      PreProc
+highlight link perlSubPrototypeError  Error
+highlight link perlSubPrototype       Type
+highlight link perlSignature          Type
+highlight link perlSubName            Function
+highlight link perlFunction           Keyword
+highlight link perlFormatName         perlIdentifier
+highlight link perlFormatField        perlString
+highlight link perlDATA               perlComment
+highlight link perlInclude            Include
+highlight link perlSpecial            Special
+highlight link perlCharacter          Character
+highlight link perlType               Type
+highlight link perlIdentifier         Identifier
+highlight link perlStatement          Statement
+highlight link perlList               perlStatement
+highlight link perlMisc               perlStatement
+highlight link perlStorageClass       perlType
+highlight link perlFunctionPRef       perlType
+highlight link perlSpecialAscii       perlSpecial
+highlight link perlSpecialDollar      perlSpecial
+
+highlight podItalic     cterm=bolditalic
+highlight podBold       cterm=bold
+highlight podBoldItalic cterm=italic
+highlight podItalic     cterm=italic
+
+highlight podFormat ctermfg=220
+
+highlight link podBoldAlternativeDelim         podBold
+highlight link podBoldAlternativeDelimOpen     podBold
+highlight link podBoldOpen                     podBold
+highlight link podCmdText                      String
+highlight link podCommand                      Statement
+highlight link podEscape2                      Number
+highlight link podEscape                       String
+highlight link podForKeywd                     Identifier
+highlight link podIndexAlternativeDelim        Identifier
+highlight link podIndex                        Identifier
+highlight link podItalicAlternativeDelim       podItalic
+highlight link podItalicAlternativeDelimOpen   podItalic
+highlight link podItalicOpen                   podItalic
+highlight link podNoSpaceAlternativeDelim      Identifier
+highlight link podNoSpace                      Identifier
+highlight link podOverIndent                   Number
+highlight link podSpecial                      Identifier
+highlight link podVerbatimLine                 PreProc
+highlight link podIndexAlternativeDelimOpen    Identifier
+highlight link podIndexOpen                    Identifier
+highlight link podNoSpaceAlternativeDelimOpen  Identifier
+highlight link podNoSpaceOpen                  Identifier
 
 syn match Brackets          display '[][]'
 syn match Parens            display '()'
@@ -27,52 +173,23 @@ syn match pX                display '-[rwxoRWXOezsfdlpSbctugkTBMAC]'
 syn match pkg               display '::'
 syn match semi              display ';'
 
-
-hi perlFiledescRead      ctermfg=245 cterm=bold
-hi perlFiledescStatement ctermfg=160 cterm=bold
-hi perlFunctionName                  cterm=bold
-hi perlMatch             ctermfg=137 cterm=NONE
-hi perlMatchStartEnd     ctermfg=131 cterm=bold
-hi perlMethod            ctermfg=148 cterm=bold
-hi perlOperator          ctermfg=124 cterm=bold
-hi perlQQ                ctermfg=137 cterm=NONE
-hi perlRepeat            ctermfg=197 cterm=bold
-hi perlSharpBang         ctermfg=244 cterm=italic
-hi perlSpecialMatch      ctermfg=214 cterm=NONE
-hi perlSpecialString     ctermfg=143 cterm=bold
-hi perlStatementFiledesc ctermfg=202 cterm=bold
-hi perlStatementInclude  ctermfg=204 cterm=bold
-hi perlStatementIndirObj ctermfg=202 cterm=bold
-hi perlStatementList     ctermfg=166 cterm=bold
-hi perlStatementPackage  ctermfg=208 cterm=bold
-hi perlStatementScalar   ctermfg=250 cterm=bold
-hi perlString            ctermfg=137 cterm=none ctermbg=234
-hi perlStringStartEnd    ctermfg=166 cterm=bold
-hi perlStringUnexpanded  ctermfg=131 cterm=none ctermbg=234
-hi perlTodo              ctermfg=196 cterm=bold ctermbg=235
-hi perlVarPlain2         ctermfg=178 cterm=NONE
-
-hi Braces                            cterm=bold
-hi Brackets                          cterm=bold
-hi Dumper                ctermfg=196 cterm=bold
-hi Parens                ctermfg=248 cterm=bold
-hi comma                 ctermfg=246 cterm=none
-hi dt                    ctermfg=002 cterm=bold
-hi fat_comma             ctermfg=136 cterm=bold
-hi pARGV                 ctermfg=148 cterm=bold
-hi pAnd                  ctermfg=196 cterm=bold
-hi pArrow                ctermfg=085 cterm=bold
-hi pColon                ctermfg=160 cterm=bold
-hi pDump                 ctermfg=196 cterm=bold
-hi pExclamation_mark     ctermfg=196 cterm=bold
-hi pMethNew              ctermfg=088 cterm=none
-hi pOr                   ctermfg=196 cterm=bold
-hi pQuestion_mark        ctermfg=082 cterm=bold
-hi pRepeat               ctermfg=197 cterm=bold
-hi pX                    ctermfg=208 cterm=bold
-hi pkg                   ctermfg=245 cterm=none
-hi semi                  ctermfg=086 cterm=none
-
-"hi PerlVarNotInMatches cterm=bold  cterm=none
-"hi perlVarSimpleMember cterm=bold  cterm=none
-"hi perlVarPlain        ctermfg=107 cterm=bold
+highlight Braces                            cterm=bold
+highlight Brackets                          cterm=bold
+highlight Dumper                ctermfg=196 cterm=bold
+highlight Parens                ctermfg=248 cterm=bold
+highlight comma                 ctermfg=246 cterm=none
+highlight dt                    ctermfg=002 cterm=bold
+highlight fat_comma             ctermfg=136 cterm=bold
+highlight pARGV                 ctermfg=148 cterm=bold
+highlight pAnd                  ctermfg=196 cterm=bold
+highlight pArrow                ctermfg=085 cterm=bold
+highlight pColon                ctermfg=160 cterm=bold
+highlight pDump                 ctermfg=196 cterm=bold
+highlight pExclamation_mark     ctermfg=196 cterm=bold
+highlight pMethNew              ctermfg=088 cterm=none
+highlight pOr                   ctermfg=196 cterm=bold
+highlight pQuestion_mark        ctermfg=082 cterm=bold
+highlight pRepeat               ctermfg=197 cterm=bold
+highlight pX                    ctermfg=208 cterm=bold
+highlight pkg                   ctermfg=245 cterm=none
+highlight semi                  ctermfg=086 cterm=none
