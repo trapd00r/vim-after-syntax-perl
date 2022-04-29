@@ -46,7 +46,7 @@ highlight perlSyncPOD                   ctermbg=032
 highlight perlTodo                      ctermfg=196 cterm=bold ctermbg=235
 highlight perlVarBlock                  ctermbg=220
 highlight perlVarBlock2                 ctermbg=220
-highlight perlVarMember                 ctermbg=220
+highlight perlVarMember                 ctermbg=bg
 highlight perlVarPlain                  ctermfg=010 cterm=none
 highlight perlVarPlain2                 ctermfg=178 cterm=none
 highlight perlVarSimpleMemberName       ctermfg=137
