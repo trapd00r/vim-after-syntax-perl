@@ -2,8 +2,40 @@
 "   Where: $VIMRUNTIME/after/syntax/perl.vim
 "  Author: Magnus Woldrich <m@japh.se>
 "     URL: http://github.com/trapd00r/vim-after-syntax-perl
-" Updated: 2022-04-28 10:37:17
+" Updated: 2022-05-26 23:25:30
 
+""" Extended highlighting of regexes added from https://github.com/vim-perl/vim-perl/pull/276
+" Special handling for capturing roups and for the '|' separator (ie 'or') symbol.
+syn region perlCaptureGroup    matchgroup=MatchGroupStartEnd  start="(\([?!]\)\@!"         end=")" contained transparent
+syn region perlNonCaptureGroup matchgroup=MatchGroupStartEnd2 start="(?\%([#:=!]\|<[=!]\)" end=")" contained transparent
+syn match  perlPatSep "|" contained
+
+" Special characters in strings and matches
+syn match  perlSpecialString   "\\\%(\o\{1,3}\|x\%({\x\+}\|\x\{1,2}\)\|c.\|[^cx]\)" contained extend
+syn match  perlSpecialStringU2 "\\."                                                contained extend contains=NONE
+syn match  perlSpecialStringU  "\\\\"                                               contained
+syn match  perlSpecialMatch    "\\[1-9]"                                            contained extend
+syn match  perlSpecialMatch    "\\g\%(\d\+\|{\%(-\=\d\+\|\h\w*\)}\)"                contained
+syn match  perlSpecialMatch    "\\k\%(<\h\w*>\|'\h\w*'\)"                           contained
+syn match  perlSpecialMatch    "{\d\+\%(,\%(\d\+\)\=\)\=}"                          contained
+syn match  perlSpecialMatch    "\[[]-]\=[^\[\]]*[]-]\=\]"                           contained extend
+syn match  perlSpecialMatch    "(?[impsx]*\%(-[imsx]\+\)\=)"                        contained
+syn match  perlSpecialMatch    "(?\%([-+]\=\d\+\|R\))"                              contained
+syn match  perlSpecialMatch    "(?\%(&\|P[>=]\)\h\w*)"                              contained
+syn match  perlSpecialMatch    "(\*\%(\%(PRUNE\|SKIP\|THEN\)\%(:[^)]*\)\=\|\%(MARK\|\):[^)]*\|COMMIT\|F\%(AIL\)\=\|ACCEPT\))" contained
+syn match  perlMultiModifiers  "[+*.?]" contained
+
+highlight MatchGroupStartEnd            ctermfg=202 cterm=none
+highlight MatchGroupStartEnd2           ctermfg=208 cterm=none
+highlight perlSpecialStringU2           ctermfg=197
+highlight perlSpecialStringU            ctermfg=192
+highlight perlSpecialString             ctermfg=143 cterm=bold
+highlight perlSpecialMatch              ctermfg=214 cterm=none
+highlight perlPatSep                    ctermfg=231
+highlight perlNonCaptureGroup           ctermfg=214
+highlight perlMultiModifiers            ctermfg=087
+highlight perlCaptureGroup              ctermfg=231
+"""
 
 highlight perlAutoload                  ctermbg=196
 highlight perlBraces                    ctermbg=220
@@ -28,8 +60,6 @@ highlight perlRainbow_r2                ctermfg=208
 highlight perlRainbow_r3                ctermfg=196
 highlight perlRepeat                    ctermfg=197 cterm=bold
 highlight perlSharpBang                 ctermfg=244 cterm=italic
-highlight perlSpecialMatch              ctermfg=214 cterm=none
-highlight perlSpecialString             ctermfg=143 cterm=bold
 highlight perlStatementFiledesc         ctermfg=202 cterm=bold
 highlight perlStatementInclude          ctermfg=204 cterm=bold
 highlight perlStatementIndirObj         ctermfg=202 cterm=bold
@@ -50,6 +80,7 @@ highlight perlVarMember                 ctermbg=bg
 highlight perlVarPlain                  ctermfg=010 cterm=none
 highlight perlVarPlain2                 ctermfg=178 cterm=none
 highlight perlVarSimpleMemberName       ctermfg=137
+
 
 highlight link perlConditional        Conditional
 highlight link perlElseIfError        Error
@@ -78,8 +109,6 @@ highlight link perlShellCommand       perlString
 highlight link perlFloat              Float
 highlight link perlNumber             Number
 highlight link perlArrow              perlIdentifier
-highlight link perlSpecialStringU2    perlString
-highlight link perlSpecialStringU     perlSpecial
 highlight link perlNotEmptyLine       Error
 highlight link perlVStringV           perlStringStartEnd
 highlight link perlParensSQ           perlString
